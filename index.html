@@ -1,0 +1,61 @@
+<html>
+    <head>
+        <title>calculate</title>
+        <style>
+                *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            .display{
+                border: solid 1px black;
+                width: 29%;
+                margin: auto;
+                border-radius: 10%;
+                height: 70%;
+                margin-top: 6%;
+                background-color: black;
+            }
+            #screen{
+                width: 90%;
+                margin-left: 5%;
+                font-size: 50px;
+                margin-top: 4%;
+            }
+            .input{
+                margin-left: 5%;
+                width: 18%;
+                height: 15%;
+                border-radius: 10px;
+            }
+            .input:hover{
+                background-color: #EDDDDD;
+            }
+        </style>
+    </head>
+    <body>
+        <form class="display">
+            <input type="text" id="screen" name="screen">
+            <br><br>
+            <input type="button"value="7" onclick="screen.value +='7'" class="input">
+            <input type="button"value="8" onclick="screen.value +='8'" class="input">
+            <input type="button"value="9" onclick="screen.value +='9'" class="input">
+            <input type="button"value="+" onclick="screen.value +='+'" class="input">
+            <br><br>
+            <input type="button"value="4" onclick="screen.value +='4'" class="input">
+            <input type="button"value="5" onclick="screen.value +='5'" class="input">
+            <input type="button"value="6" onclick="screen.value +='6'" class="input">
+            <input type="button"value="-" onclick="screen.value +='-'" class="input">
+            <br><br>
+            <input type="button"value="1" onclick="screen.value +='1'" class="input">
+            <input type="button"value="2" onclick="screen.value +='2'" class="input">
+            <input type="button"value="3" onclick="screen.value +='3'" class="input">
+            <input type="button"value="x" onclick="screen.value +='*'" class="input">
+            <br><br>
+            <input type="button" value="c" onclick="screen.value = ''" class="input">
+            <input type="button"value="." onclick="screen.value +='.'" class="input">
+            <input type="button"value="0" onclick="screen.value +='0'" class="input">
+            <input type="button"value="=" onclick="screen.value = eval(screen.value)" class="input">
+        </form>        
+    </body>
+</html>
