@@ -1,0 +1,150 @@
+<html>
+    <head>
+        <title>assignment</title>
+        <style>
+            *{
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+            }
+            body{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: black;
+            }
+            .container{
+                height: 100vh;
+                width: 35vw;
+                background-color: white;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+            }
+            .box{
+                border: solid 1px #31394C;
+                height: 94vh;
+                width: 32vw;
+                border-radius: 10px;
+                background-color: #31394C;
+            }
+            .classbox{
+                background-color: red;
+                border: solid 1px red;
+            }
+             .toggle{
+                position: relative;
+                border: solid 1px black;
+                width: 5vw;
+                height: 5vh;
+                background-color: #CCCCCA;
+                float: right;
+                margin: 15px 25px 0px 0px;
+                border-radius: 20px;
+                cursor: pointer;
+             }
+             .toggle::before{
+                content: '';
+                position: absolute;
+                width: 2vw;
+                height: 4vh;
+                background-color: #FFFFFF;
+                border-radius: 50%;
+                top: 2px;
+                left: 3.5px;
+                transition: all 0.3s ease-in-out;
+             }
+             .toggle.active::before{
+                left: calc(100% - 0.5vw - 4vh);
+             }
+             img{
+                width: 10vw;
+                height: 21vh;
+                border-radius: 50%;
+                margin: 70px 0px 0px 150px;
+             }
+             .text{
+                padding-top: 15px;
+                text-align: center;
+                font-size: 25px;
+                color: white;
+             }
+             .number{
+                border: solid 1px #DC1E7E;
+                width: 4.5vw;
+                height: 10vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                border-radius: 50%;
+                background-color: #DC1E7E;
+                margin: 20px 0px 0px 185px;
+             }
+             .number1{
+                background-color: blue;
+                border-color: blue;
+             }
+             hr{
+                width: 30vw;
+                margin: auto;
+                margin-top: 20px;
+                border-color: #2F374A;
+             }
+             .cycle{
+                height: 30px;
+                width: 11vw;
+                margin:auto;
+                margin-top: 10px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+             }
+             span{
+                width: 15%;
+                height: 90%;
+                background-color: #DC1E7E;
+                border-radius: 10px;
+                margin: 2px;
+             }
+             button{
+                font-size: 30px;
+                border-radius: 5px;
+                margin-top: 20px;
+             }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="box">
+               <div class="toggle"></div>
+               <img src="https://thumbs.dreamstime.com/b/environment-earth-day-hands-trees-growing-seedlings-bokeh-green-background-female-hand-holding-tree-nature-field-gra-130247647.jpg" alt="image">
+               <div class="text">
+                <p>iotuser</p>
+                <p>Date of Registration: 2022-11-10</p>
+                <p>API Key: iotuser 1598</p>
+                <p>Number of Devices:</p>
+                <div class="number"><p>4</p></div>
+                <hr>
+                <h3>Change Theme</h3>
+                <div class="cycle">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+                <button>Update</button>
+               </div>
+            </div>
+        </div>
+        <script>
+            let box = document.querySelector('.box');
+            let toggle = document.querySelector('.toggle');
+            let number = document.querySelector('.number');
+            toggle.addEventListener('click',()=> number.classList.toggle('number1'))
+            toggle.addEventListener('click',()=> toggle.classList.toggle('active'))
+            toggle.addEventListener('click',()=> box.classList.toggle('classbox'))
+        </script>
+    </body>
+</html>
